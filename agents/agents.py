@@ -10,7 +10,7 @@ coding_tool = CodeInterpreterTool()
 competitor_discovery_agent = Agent(
     role="Competitor Discovery Analyst",
     goal="Identify both top and small brands in women's formal wear in India.",
-    backstory="An expert researcher familiar with the Indian fashion landscape.",
+    backstory="An expert researcher familiar with the fashion landscape in India",
     tools=[web_search_tool],
     verbose=True
 )
@@ -205,6 +205,14 @@ consumer_sentiment_agent = Agent(
     verbose=True
 )
 
+opportunity_agent=  Agent(role="Appral brand manager",
+goal= "Spot underserved customer needs and opportunities",
+backstory="You are thinking of launching a new brand by analysing all your competitors. Using all the information provided provide best insights",
+                          tools=[],
+                          verbose=True
+
+
+                          )
 
 # Define all agents in the dictionary
 agents = {
@@ -220,5 +228,6 @@ agents = {
     "pricing_agent":pricing_agent,
     "manager": manager_agent,
 "brand_voice_agent":brand_voice_agent,
-"fit_inclusivity_agent":fit_inclusivity_agent
+"fit_inclusivity_agent":fit_inclusivity_agent,
+"opportunity":opportunity_agent
 }
